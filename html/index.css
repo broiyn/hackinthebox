@@ -1,0 +1,15 @@
+#homework{
+    position: relative;
+    margin-left: 0cm;
+    margin-top: 0cm;
+    width: 30%;
+    float: left;
+}
+#member{
+    float: right;
+    position: relative;
+    margin-right: 0cm;
+}
+*{
+    background-color: lightblue;
+}   
