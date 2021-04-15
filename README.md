@@ -7,8 +7,9 @@
  * [Hack In The Box](https://hackinthebox.site)
  * GitHub repo: [https://github.com/upchang/hackinthebox](https://github.com/upchang/hackinthebox)
 # Part2:
- * Github auto deploy setup: Our setup uses a github action to replace the html folder on our server with the html folder in our GitHub repo
-when changes are pushed to main. The workflow file can be found in our repo at .github/workflows/deploy.yml.
+ * Github auto deploy setup: Our setup uses a github action to replace the html folder on our server with the html folder from our GitHub repo
+when changes are pushed to main. Just push or merge any changes to the main branch and the changes appear on our website in a matter of seconds. 
+The workflow file can be found in our repo at .github/workflows/deploy.yml.
 # Part3:
  * User/passwd to login the site:
    * USER: grader
