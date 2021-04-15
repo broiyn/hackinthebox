@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: mediumseagreen;
+}
+
+main, section {
+    height: 100vh;
+    text-align: center;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+header {
+    background-color: tan;  
+    min-width: 300px;
+    width: 65%;
+    max-width: 800px;
+    padding: 40px 0;
+    margin: 10px 0;
+    border-color: brown;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 2vw;
+    font-size: 2em;
+    box-shadow: 5px 5px 20px 0 black;
+}
+
+main p {
+    margin: 10px 0;
+    font-size: 1.3em;
+    padding: 10px;
+    border-color: brown;
+    border-width: 5px;
+    border-radius: 5px;
+    background-color: tan;
+    box-shadow: 5px 5px 20px 0 black;
+}
+
+nav {
+    width: 100%; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin: 10px 20px;
+    min-width: 120px;
+    width: 15%;  
+    max-width: 150px;   
+}
+
+a {
+    display: block;
+    font-size: 1.5em;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px 0;
+    background-color: tan;  
+    border-color: brown;
+    border-width: 5px;
+    border-style: solid; 
+    text-decoration: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px 0 black;
+} 
+
+li a {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+    background-color: tan;  
+    border-color: brown;
+    border-width: 5px;
+    border-style: solid; 
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    box-shadow: 0 0 20px 15px yellow;
+    transform: scale(1.2);
+}
+
+a:hover {
+    box-shadow: 0 0 20px 15px yellow;
+    transform: scale(1.2);
+}
+
+a:active {
+    transform: translateY(2px);
+}
+
+section {
+    /* display: none; */
+    /* max-width: 50em;*/
+    padding: 10% 5%;
+}
+
+section a {
+    display: inline-block; 
+    margin: 20px 40px;
+}
+
+.inner-box {
+    background-color: tan;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: brown;
+    border-style: solid;
+    box-shadow: 5px 5px 50px 0 black;
+}
+
+section p {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+summary, details {
+    font-size: 1.2em;
+}
+
+h2 {
+    font-size: 2em;
+}
