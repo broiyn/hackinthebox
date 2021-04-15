@@ -2,6 +2,7 @@
  * grader@143.198.224.52 	pass: Ucsd_2020
  * [private ssh key](./id_rsa)
  * [Hack In The Box](https://hackinthebox.site)
+ * GitHub repo: [https://github.com/upchang/hackinthebox](https://github.com/upchang/hackinthebox)
 # Part2:
  * Detail of Github auto deploy setup: TODO
 # Part3:
