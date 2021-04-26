@@ -1,128 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Metadata goes here -->
-    <!-- Title goes here -->
-    <title>Welcome to my webpage!!!</title>
-    <meta charset="utf-8">
-    <!-- Meta goes here -->
-    <meta name="keywords" content="CSE110, lab2">
-    <meta name="author" content="Nhat Nguyen">
-    <meta name="description" content="This is a practice for lab 2 in CSE110">  
-    <!-- Link goes here -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link href="./mystyle.css" rel="stylesheet">
-    <style> 
-      p {
-        font-family: "Lucida Console", "Courier New", monospace;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Content goes here -->
-    <header>
-      <h1 class="header">This is Nhat's Page</h1>
-    </header>
-    <main>
-      <h1>Welcome to my webpage</h1>
-      <aside>
-        <p>There are a lot of things to explore here</p>
-      </aside>
-      
-    </main>
-    <div class="MapContainer">
-      <iframe class="Map"
-            title="Map"
-            width="300"
-            height="300"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429154.7584808257!2d-117.38916098812687!3d32.824817515294825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20California!5e0!3m2!1svi!2sus!4v1611369332936!5m2!1svi!2sus">
-        </iframe>
-      <p id="map">Let's explore my web page like exploring this map</p>
-    </div>
-    <h2 title="Content">Content:</h2>
-    <nav class="list_content">
-      <ol>
-        <li><a href="#introduction">Introduction</a></li>
-        <li id="education"><a href="#">Education</a></li>
-        <li id="hobbies"><a href="#">Hobbies</a></li>
-        <li id="achieve"><a href="#">Achieve</a></li>
-        <li id="goal"><a href="#">Goal</a></li>
-      </ol>
-    </nav>
-    <div class="introcontainer">
-      <section class="introsection">
+
+<head>
+  <!-- Metadata goes here -->
+  <!-- Title goes here -->
+  <title>Welcome to my webpage!!!</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDC76SMCB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZDC76SMCB7');
+  </script>
+  <meta charset="utf-8">
+  <!-- Meta goes here -->
+  <meta name="keywords" content="CSE110, lab2">
+  <meta name="author" content="Nhat Nguyen">
+  <meta name="description" content="This is a practice for lab 2 in CSE110">
+  <!-- Link goes here -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link href="./mystyle.css" rel="stylesheet">
+  <style>
+    p {
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Content goes here -->
+  <header>
+    <h1 class="header">This is Nhat's Page</h1>
+  </header>
+  <main>
+    <h1>Welcome to my webpage</h1>
+    <aside>
+      <p>There are a lot of things to explore here</p>
+    </aside>
+
+  </main>
+  <div class="MapContainer">
+    <iframe class="Map" title="Map" width="300" height="300"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429154.7584808257!2d-117.38916098812687!3d32.824817515294825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530fad921e4b%3A0xd3a21fdfd15df79!2sSan%20Diego%2C%20California!5e0!3m2!1svi!2sus!4v1611369332936!5m2!1svi!2sus">
+    </iframe>
+    <p id="map">Let's explore my web page like exploring this map</p>
+  </div>
+  <h2 title="Content">Content:</h2>
+  <nav class="list_content">
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li id="education"><a href="#">Education</a></li>
+      <li id="hobbies"><a href="#">Hobbies</a></li>
+      <li id="achieve"><a href="#">Achieve</a></li>
+      <li id="goal"><a href="#">Goal</a></li>
+    </ol>
+  </nav>
+  <div class="introcontainer">
+    <section class="introsection">
       <h2 id="introduction">Introduction:</h2>
-      <div><p>My name is <span class="ingredient">Nhat Nguyen</span>. I am from <b>VietNam</b>. I have been here in the US for more than <i>5 years</i> now.</p></div>
-      
-      <div><p>First time come here, I am very sad because I have to start a new life while I get used to the old life. I'm not ready for the new life yet.
-        However, after spend years and years in the US, I am very happy because of my decision to come here. I have more friends and start to do what I like now.</p></div>
-     <hr>
-                                            
-      </section>
-      <figure>
-        <img src="./images/Songoku.png" width="400" height="300"
-           alt="Son go ku">
-        <figcaption>This is Dragon Balls which is one of my favorite cartoon I like</figcaption>
-      </figure>
-    </div>
-    
-    <section class="hobbisection">
-      <h2>Hobbies:</h2>
-      <div><p>What I do like in free time is <strong> playing video game</strong> and <strong>working out</strong> with my friends.</p></div>
-      <div><p>Other than that, I also spend night time to read <em>some books</em> and <em>coding</em></p></div>
-      <div><p>I am happy because of taking CSE class because the more I learn the more I know how we bring these coding to real life.</p></div>
+      <div>
+        <p>My name is <span class="ingredient">Nhat Nguyen</span>. I am from <b>VietNam</b>. I have been here in the US
+          for more than <i>5 years</i> now.</p>
+      </div>
+
+      <div>
+        <p>First time come here, I am very sad because I have to start a new life while I get used to the old life. I'm
+          not ready for the new life yet.
+          However, after spend years and years in the US, I am very happy because of my decision to come here. I have
+          more friends and start to do what I like now.</p>
+      </div>
+      <hr>
+
     </section>
-    <section>
-      <h1>More about my life in the US</h1>
-      <details>
-        <summary>I came here since 2015</summary>
-        My family has 7 people. I came here when I was 18. My parents didn't know a single English word. However, after 5 years, we have some successors such as I went to college
-        , my 2 other sisters came community college also. My parents can go to work easily. Generally, everything is good for us.
-      </details>
-    </section>
-      <label for="satisfy-level">Choose your satisfy of this page:</label>
-      <select id="satisfy-level">
-        <optgroup label="like">
-          <option>Like very much</option>
-          <option>It's ok but need to improve</option>
-        </optgroup>
-        <optgroup label="dislike">
-          <option>very bad</option>
-          <option>nothing to see here</option>
-        </optgroup>
-      </select>
+    <figure>
+      <img src="./images/Songoku.png" width="400" height="300" alt="Son go ku">
+      <figcaption>This is Dragon Balls which is one of my favorite cartoon I like</figcaption>
+    </figure>
+  </div>
+
+  <section class="hobbisection">
+    <h2>Hobbies:</h2>
+    <div>
+      <p>What I do like in free time is <strong> playing video game</strong> and <strong>working out</strong> with my
+        friends.</p>
     </div>
-      <section>
-        <h2>Struggles:</h2>
-        <ul>
-          <li><strong>Language</strong>: One of the biggest struggles in my life is studying other language.
-            However, I am happy because I made it. Also, if I can't learn other language, I could I learn Java or C????</li>
-          <li><strong>Financial</strong>: Of course, everyone has this problem because of COVID19. However, we have a lot of helps from government. I am happy that
-            I'm living here.<li>
-          <li><strong>School</strong>: Coding seems very interesting but to do it is hard.I remember first time writing <code>System.out.println("Hello, world!")</code>, I was 
-            very excited to see how it print Hello, world to the console. I know it is just a simplest code and there are a lot difficult out there but I still keep trying and trying.
-        </ul>
-      </section>
-      <h1>To register my page, please <a href="./form.html">here.</a></h1>   
-      <h1>To see my plan for next quarter, click <a href="./plan.html">here</a></h1>
-      <h6>Contact the author of this page to make the page more interesting:</h6>
-      <button class="favorite page" type="button">Click here to like page</button>
-        <template id="template"> Hope you guys enjoy my first web page</template>
-      <address>
-        <a href="mailto:nmn009@ucsd.edu">nmn009@ucsd.edu</a><br>
-        <a href="tel:+18581234567">(858) 1234567</a>
-      </address>
-                                 <pre>
+    <div>
+      <p>Other than that, I also spend night time to read <em>some books</em> and <em>coding</em></p>
+    </div>
+    <div>
+      <p>I am happy because of taking CSE class because the more I learn the more I know how we bring these coding to
+        real life.</p>
+    </div>
+  </section>
+  <section>
+    <h1>More about my life in the US</h1>
+    <details>
+      <summary>I came here since 2015</summary>
+      My family has 7 people. I came here when I was 18. My parents didn't know a single English word. However, after 5
+      years, we have some successors such as I went to college
+      , my 2 other sisters came community college also. My parents can go to work easily. Generally, everything is good
+      for us.
+    </details>
+  </section>
+  <label for="satisfy-level">Choose your satisfy of this page:</label>
+  <select id="satisfy-level">
+    <optgroup label="like">
+      <option>Like very much</option>
+      <option>It's ok but need to improve</option>
+    </optgroup>
+    <optgroup label="dislike">
+      <option>very bad</option>
+      <option>nothing to see here</option>
+    </optgroup>
+  </select>
+  </div>
+  <section>
+    <h2>Struggles:</h2>
+    <ul>
+      <li><strong>Language</strong>: One of the biggest struggles in my life is studying other language.
+        However, I am happy because I made it. Also, if I can't learn other language, I could I learn Java or C????</li>
+      <li><strong>Financial</strong>: Of course, everyone has this problem because of COVID19. However, we have a lot of
+        helps from government. I am happy that
+        I'm living here.
+      <li>
+      <li><strong>School</strong>: Coding seems very interesting but to do it is hard.I remember first time writing
+        <code>System.out.println("Hello, world!")</code>, I was
+        very excited to see how it print Hello, world to the console. I know it is just a simplest code and there are a
+        lot difficult out there but I still keep trying and trying.
+    </ul>
+  </section>
+  <h1>To register my page, please <a href="./form.html">here.</a></h1>
+  <h1>To see my plan for next quarter, click <a href="./plan.html">here</a></h1>
+  <h6>Contact the author of this page to make the page more interesting:</h6>
+  <button class="favorite page" type="button">Click here to like page</button>
+  <template id="template"> Hope you guys enjoy my first web page</template>
+  <address>
+    <a href="mailto:nmn009@ucsd.edu">nmn009@ucsd.edu</a><br>
+    <a href="tel:+18581234567">(858) 1234567</a>
+  </address>
+  <pre>
                                  |\   | |   |      /\    ----------
                                  | \  | |___|     /__\       |
                                  |  \ | |   |    /    \      |
                                  |   \| |   |   /      \     |
                                  </pre>
-    <footer>
-                                 <p> Author: Nhat Nguyen</p>
-                                 <p> Date: Jan 09 2021</p>                             
-    </footer>
-                                 
-    </body>
+  <footer>
+    <p> Author: Nhat Nguyen</p>
+    <p> Date: Jan 09 2021</p>
+  </footer>
+
+</body>
+
 </html>

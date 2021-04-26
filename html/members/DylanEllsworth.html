@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dylan Ellsworth</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js"></script>
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="stylesheet" href="./DylanEllsworth.css">
-  </head>
 
-  <body>
-    <header>
-      <h1 id="name">
-        -- DYLAN ELLSWORTH --
-      </h1>
-    </header>
-    <h2 id="underTitle">CSE 135 Personal Page</h2>
-    <div class='tetrominos'>
-      <div class='tetromino box1'></div>
-      <div class='tetromino box2'></div>
-      <div class='tetromino box3'></div>
-      <div class='tetromino box4'></div>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDC76SMCB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZDC76SMCB7');
+  </script>
+  <meta charset="UTF-8" />
+  <title>Dylan Ellsworth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./index.js"></script>
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="./DylanEllsworth.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="name">
+      -- DYLAN ELLSWORTH --
+    </h1>
+  </header>
+  <h2 id="underTitle">CSE 135 Personal Page</h2>
+  <div class='tetrominos'>
+    <div class='tetromino box1'></div>
+    <div class='tetromino box2'></div>
+    <div class='tetromino box3'></div>
+    <div class='tetromino box4'></div>
+  </div>
+  <section id="Table of Contents">
+    <div id="tob">
+      <nav>
+        <h2><u>Table Of Contents</u></h2>
+        <ul>
+          <li class="text"><a href="#introduction">Introduction</a></li>
+          <li class="text"><a href="#gallery">Photo Gallery</a></li>
+          <li class="text"><a href="#ASCII Art">ASCII Art</a></li>
+        </ul>
+      </nav>
     </div>
-    <section id="Table of Contents">
-      <div id="tob">
-        <nav>
-          <h2><u>Table Of Contents</u></h2>
-          <ul>
-              <li class="text"><a href="#introduction">Introduction</a></li>
-              <li class="text"><a href="#gallery">Photo Gallery</a></li>
-              <li class="text"><a href="#ASCII Art">ASCII Art</a></li>
-          </ul>
-      </nav> 
+  </section>
+  <section id="introduction">
+    <div class="box">
+      <h2><u>Introduction</u></h2>
+      <p class="text">
+        Hi, My name is Dylan! I am a third year student at UCSD studying computer science and business.
+        In my free time I like to surf, hike, and travel. My favorite sports are football and baseball.
+        Because my parents are from California and Minesota, I grew up watching teams from both states.
+        Now I root for the Vikings and Chargers for football and the Padres and Twins in baseball. I
+        travel and camp relatively often, however this last year I was limited with the pandemic. Hopefully
+        now that people are getting vaccinated and we build up immunity, we can go back to doing the activities
+        that we enjoy and interacting with each other in person!
+      </p>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="box">
+      <h2><u> Photo Gallery</u></h2>
+      <p class="text">
+        I love nature and enjoy traveling to new places around the country. I like to bring a camera with me
+        wherever I go to document my adventures. One day I hope to visit all 50 states! Here are a few pictures
+        from my some of my most recent trips.
+      </p>
+      <div id="gallery">
+        <img src="./images/buffalo.JPG" style="width:49%" alt="Buffalo grazing in a field">
+        <img src="./images/needles.jpg" style="width:49%" alt="Upright rock  outcrops on the Needles Highway">
+        <img src="./images/treesAndFalls.jpg" style="width:32.5%" alt="Waterfall at Yellowstone National Park">
+        <img src="./images/river.jpg" style="width:32.5%" alt="The Yellowstone River viewed from above">
+        <img src="./images/waterfall.jpg" style="width:32.5%"
+          alt="A Waterfall near Jenny Lake in Gand Teton National Park">
+        <img src="./images/rainforest.jpeg" style="width:49%"
+          alt="The foliage of the forrest surrounding Maunawili falls on O'ahu">
+        <img src="./images/rockjumping.jpg" style="width:49%"
+          alt="Sunset cliff jumping at Waimea Bay on the North Shore of O'ahu">
       </div>
-    </section>
-    <section id="introduction">
-      <div class="box">
-        <h2><u>Introduction</u></h2>
-        <p class="text">
-          Hi, My name is Dylan! I am a third year student at UCSD studying computer science and business.
-          In my free time I like to surf, hike, and travel. My favorite sports are football and baseball.
-          Because my parents are from California and Minesota, I grew up watching teams from both states.
-          Now I root for the Vikings and Chargers for football and the Padres and Twins in  baseball. I 
-          travel and camp relatively often, however this last year I was limited with the pandemic. Hopefully
-          now that people are getting vaccinated and we build up immunity, we  can go back to doing the activities 
-          that we enjoy and  interacting  with each other in person!
-        </p>
-      </div>
-    </section>
-    <section id="gallery">
-      <div class="box">
-        <h2><u> Photo Gallery</u></h2>
-        <p class="text">
-          I love nature and enjoy traveling to new places around the country. I like to bring a camera with me
-          wherever I go to document my adventures. One day I hope to  visit all  50 states! Here are a few pictures 
-          from my some of my most recent trips.
-        </p>
-        <div id="gallery">
-          <img src="./images/buffalo.JPG" style="width:49%"
-              alt="Buffalo grazing in a field">
-          <img src="./images/needles.jpg" style="width:49%"
-              alt="Upright rock  outcrops on the Needles Highway">
-          <img src="./images/treesAndFalls.jpg" style="width:32.5%"
-              alt="Waterfall at Yellowstone National Park">
-          <img src="./images/river.jpg" style="width:32.5%"
-              alt="The Yellowstone River viewed from above">
-          <img src="./images/waterfall.jpg" style="width:32.5%"
-              alt="A Waterfall near Jenny Lake in Gand Teton National Park">
-          <img src="./images/rainforest.jpeg" style="width:49%"
-              alt="The foliage of the forrest surrounding Maunawili falls on O'ahu">
-          <img src="./images/rockjumping.jpg" style="width:49%"
-              alt="Sunset cliff jumping at Waimea Bay on the North Shore of O'ahu">
-        </div>
-      </div>
-    </section>
-    <section id="ASCII Art">
-      <div class="asciiBox">
-        <h2><u>ASCII Art</u></h2>
-        <p class="text">I wrote a fun program that converts any image into ASCII text. Here are a few of the results that were generated.</p>
-        <pre class="asciiText">
+    </div>
+  </section>
+  <section id="ASCII Art">
+    <div class="asciiBox">
+      <h2><u>ASCII Art</u></h2>
+      <p class="text">I wrote a fun program that converts any image into ASCII text. Here are a few of the results that
+        were generated.</p>
+      <pre class="asciiText">
 
-                                                                                                                           
+
                                              .                                                ..:..                        
                                        .=+:.%%#-                                      .-=+**##********+=:                  
                                        *%%#*%%%#*.                                :+*%#*++===---------==+*+-               
@@ -123,7 +130,7 @@
 
 
         </pre>
-        <pre class="asciiText">
+      <pre class="asciiText">
                                           .                                                                                               
                               *=%#*+=:::                                                                                        
                          .-==*#@@@@@@@@%*+- .                                                                                   
@@ -174,12 +181,12 @@
                              .#@@@@@@@@@@*.                                                                                     
 
         </pre>
-        <pre class="asciiText">
-                                                                                                                                     
-                                                                                                                           
-                                                                                                                           
-                                                                                                                           
-                                                                                                                           
+      <pre class="asciiText">
+
+
+
+
+
                                     -:                                                                                     
                                     -%#-     +=                                                                            
                                     :%%%#:.=%%+                                                                            
@@ -238,13 +245,14 @@
                                                                                                                            
 
         </pre>
-      </div>
-    </section>
-    <div id="accessTime">
-      <script>
+    </div>
+  </section>
+  <div id="accessTime">
+    <script>
       document.write(`Page Accessed @ ${new Date()}`);
     </script>
-    </div>
-    
-  </body>
+  </div>
+
+</body>
+
 </html>
