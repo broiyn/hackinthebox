@@ -17,7 +17,7 @@ print("""
 <hr>
 """)
 
-bytes_read = sys.stdin
+bytes_read = sys.stdin.read()
 print("<b>Message Body:</b> %s<br />" % (bytes_read))
 
 # Print out formatted query string
