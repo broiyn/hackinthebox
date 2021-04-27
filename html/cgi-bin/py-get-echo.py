@@ -16,7 +16,7 @@ print("""
 <hr>
 """)
 
-print("b>Query String:</b> %s<br />" % (os.environ['QUERY_STRING']))
+print("<b>Query String:</b> %s<br />" % (os.environ['QUERY_STRING']))
 
 
 
