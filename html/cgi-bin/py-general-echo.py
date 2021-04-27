@@ -19,8 +19,8 @@ print("""
 
 # HTTP Protocol, HTTP Method, and the Query String are all environment variables
 print("<p><b>HTTP Protocol:</b> %s</p>" % (os.environ['SERVER_PROTOCOL']))
-print "<p><b>HTTP Method:</b> %s</p>" % (os.environ['REQUEST_METHOD']))
-print "<p><b>Query String:</b> %s</p>" % (os.environ['QUERY_STRING']))
+print("<p><b>HTTP Method:</b> %s</p>" % (os.environ['REQUEST_METHOD']))
+print("<p><b>Query String:</b> %s</p>" % (os.environ['QUERY_STRING']))
 
 form_data = sys.stdin.read()
 
