@@ -8,7 +8,7 @@ import os
 
 cgitb.enable()
 
-print("Content-Type: text/html")    # HTML is following
+print("Cache-Control: no-cache\n")    # HTML is following
 print("Content-type: text/html\n\n")
 print()                             # blank line, end of headers
 
