@@ -20,4 +20,3 @@ print "<p>Your IP Address: #{address}</p>";
 
 print "</body>";
 print "</html>";
-print "<html><body>Hello World!</body></html>\r\n";
