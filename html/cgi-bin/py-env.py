@@ -6,7 +6,7 @@ import os
 cgitb.enable()
 
 print("Cache-Control: no-cache")
-print("Content-type: application/json")
+print("Content-type: text/html")
 print()
 
 print("""
