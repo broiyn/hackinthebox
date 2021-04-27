@@ -16,7 +16,7 @@ print("""
 </head><body><h1 align="center">POST Request Echo</h1>
 <hr>
 """)
-
+"""
 bytes_read = sys.stdin
 print("<b>Message Body:</b> %s<br />" % (bytes_read))
 
@@ -28,6 +28,6 @@ if len(bytes_read) > 0:
     name = pair.split('=')
     print("<tr><td>%s:</td><td>%s</td></tr>" % (name[0], name[1]))
   print "</table>"
-
+"""
 # Print the HTML file bottom
 print("</body></html>")
