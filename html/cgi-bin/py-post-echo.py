@@ -17,6 +17,13 @@ print("""
 <hr>
 """)
 
+print("""
+<form action = "/cgi-bin/py-post-echo.py" method = "post">
+First Name: <input type = "text" name = "first_name"><br />
+<input type = "submit" value = "Submit" />
+</form>
+""")
+
 bytes_read = sys.stdin.read()
 print("<b>Message Body:</b> %s<br />" % (bytes_read))
 
