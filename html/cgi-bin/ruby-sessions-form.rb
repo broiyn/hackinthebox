@@ -12,10 +12,10 @@ print <<END;
 <hr>
 END
 
-print "CGI using PHP";
+print "CGI using Ruby";
 print "<form name=\"form\" action=\"ruby-cookie-sessions-1.rb\" method=\"post\">";
 print "<label>What is your name?";
-print "  <input type=\"text\" name=\"name\" id=\"subject\" value=\"\"><br>";
+print "<input type=\"text\" name=\"name\" id=\"subject\" value=\"\"><br>";
 print "</label>";
 
 print " <input type=\"submit\" value=\"Test Sessioning\">";
