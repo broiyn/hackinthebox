@@ -6,4 +6,4 @@
 # passwrd : Ucsd_2020
 
 # screenshots and code are also in our github repo 
-
+# note: we weren't able to get cookies working for python and ruby before the deadline 
