@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-#import cgitb
-#cgitb.enable()
 
 import cgitb
 import time
@@ -8,8 +6,8 @@ import os
 
 cgitb.enable()
 
-print("Cache-Control: no-cache\n")    # HTML is following
-print("Content-type: text/html\n\n")
+print("Cache-Control: no-cache")    # HTML is following
+print("Content-type: text/html")
 print()                             # blank line, end of headers
 
 print("<html>")

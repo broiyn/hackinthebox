@@ -7,8 +7,8 @@ import json
 
 cgitb.enable()
 
-print("Cache-Control: no-cache\n")
-print("Content-type: application/json\n\n")
+print("Cache-Control: no-cache")
+print("Content-type: application/json")
 print()
 
 date = time.asctime( time.localtime(time.time()) )
