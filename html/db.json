@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "author": "something"
+    },
+    {
+      "id": 5,
+      "author": "nhat nguyen"
+    },
+    {
+      "author": "nhat nguyen",
+      "title": "checking post",
+      "id": 6
+    },
+    {
+      "author": "nhat nguyen",
+      "title": "checking post",
+      "id": 7
+    }
+  ]
