@@ -46,8 +46,9 @@ function get_page_load(){
     //object loading time
 
     //time when page start loading
-
+    var start_timer = Date.now();
     //time when page done loading
+    
 
     //time when the page completely loaded
 }
