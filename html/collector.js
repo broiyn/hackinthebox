@@ -112,7 +112,7 @@ function fetch_performance() {
         'window_width': width_window,
         'network_connection': type
     };
-    fetch("https://hackinthebox.site/json/performance", { // note we are going to /1
+    fetch("https://hackinthebox.site/json/posts", { // note we are going to /1
         method: "POST",
         headers: {
             "Content-Type": "application/json"
