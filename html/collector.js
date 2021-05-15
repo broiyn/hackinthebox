@@ -25,7 +25,7 @@ var page_end;
 //time when the page completely loaded
 var loadTime;
 window.onload = function () {
-    loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+    loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
     console.log('start time' + window.performance.timing.domContentLoadedEventStart);
     console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
     page_end = page_start + loadTime;
@@ -36,7 +36,7 @@ window.onload = function () {
 
 // Collect Mouse position
 var mouse_position = []
-document.addEventListener("mousemove", function(event){
+document.addEventListener("mousemove", function (event) {
     var x = event.clientX;
     var y = event.clientY;
     var position = `(${x},${y})`;
@@ -49,7 +49,7 @@ document.addEventListener("mousemove", function(event){
 
 // Collect Key up event
 var keypressed = [];
-document.addEventListener('keyup', function(e){
+document.addEventListener('keyup', function (e) {
     keypressed.push(e.code);
 })
 
@@ -57,15 +57,15 @@ document.addEventListener('keyup', function(e){
 
 //When user enter the page
 var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date+' '+time;
+var dateTime = date + ' ' + time;
 console.log(dateTime);
 // user left the page
 var dateTime_out;
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
     var time = new Date();
-    var date_out = time.getFullYear() + '-' + (time.getMonth()+1) + '-' + time.getDate();
+    var date_out = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
     var time_out = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
     dateTime_out = date_out + ' ' + time_out;
     fetch_activity();
@@ -100,3 +100,14 @@ function fetch_activity() {
         body: JSON.stringify(postdata)
     });
 }
+function test(){
+    fetch("https://hackinthebox.site/json/posts/")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.length);
+        });
+        
+        
+}
+
+test();
