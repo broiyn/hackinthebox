@@ -17,22 +17,22 @@ var type = connection.effectiveType;
 timingObject = window.performance.timing;
 
 //time when page start loading
-var load_start = timingObject.loadEventStart;
+var load_start;
 
 //time when page done loading
-var load_end = timingObject.loadEventEnd;
+var load_end;
 
 //time when the page completely loaded
-var loadTime = timingObject.loadEventEnd-timingObject.navigationStart;
+var loadTime;
 
-/*
 window.onload = function () {
+    load_start = timingObject.loadEventStart;
+    load_end = timingObject.loadEventEnd;
     loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     console.log('start time' + window.performance.timing.loadEventStart);
     console.log('end time' + window.performance.timing.loadEventEnd);
-    //page_end = page_start + loadTime;
 }
-*/
+
 // COLLECT ACTIVITY HERE
 
 
