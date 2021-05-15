@@ -27,13 +27,14 @@ var loadTime;
 
 window.onload = function () {
     setTimeout(function() { 
-        load_start = timingObject.loadEventStart;
-        load_end = timingObject.loadEventEnd;
+        loadStartDate = new Date(timingObject.navigationStart);
+        load_start = loadStartDate.toUTCString();
+
+        loadEndDate = new Date(timingObject.loadEventEnd);
+        load_end = loadEndDate.toUTCString();
+
         loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     }, 0);
-    
-/*    console.log('start time' + window.performance.timing.loadEventStart);
-    console.log('end time' + window.performance.timing.loadEventEnd);*/
 }
 
 // COLLECT ACTIVITY HERE
