@@ -27,17 +27,10 @@ var loadTime = timingObject.loadEventEnd-timingObject.navigationStart;
 
 /*
 window.onload = function () {
-<<<<<<< HEAD
-    loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-    console.log('start time' + window.performance.timing.domContentLoadedEventStart);
-    console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
-    page_end = page_start + loadTime;
-=======
     loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     console.log('start time' + window.performance.timing.loadEventStart);
     console.log('end time' + window.performance.timing.loadEventEnd);
     //page_end = page_start + loadTime;
->>>>>>> d87354efdd671d2ed1f48080d9fba2506c2c8978
 }
 */
 // COLLECT ACTIVITY HERE
