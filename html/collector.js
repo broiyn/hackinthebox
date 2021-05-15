@@ -52,6 +52,13 @@ document.addEventListener("mousemove", function (event) {
 //Click(which buttons)
 
 //Scrolling(coordinates of the scroll)
+var scrollPos = []
+window.addEventListener("scroll", (event) => {
+    var scrollX = this.scrollX;
+    var scrollY = this.scrollY;
+    var pos = `(${scrollX},${scrollY})`;
+    scrollPos.push(pos);
+});
 
 // Collect Key up event
 var keypressed = [];
@@ -94,6 +101,7 @@ function fetch_activity() {
         'current_page': current_page,
         'keypress': keypressed,
         'mouse_position': mouse_position,
+        'scroll': scrollPos,
         'timing_object': timingObject,
         'load_start': load_start,
         'load_end': load_end,
