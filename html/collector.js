@@ -17,29 +17,22 @@ var type = connection.effectiveType;
 timingObject = window.performance.timing;
 
 //time when page start loading
-var load_start = timingObject.loadEventStart;
+var load_start;
 
 //time when page done loading
-var load_end = timingObject.loadEventEnd;
+var load_end;
 
 //time when the page completely loaded
-var loadTime = timingObject.loadEventEnd-timingObject.navigationStart;
+var loadTime;
 
-/*
 window.onload = function () {
-<<<<<<< HEAD
-    loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-    console.log('start time' + window.performance.timing.domContentLoadedEventStart);
-    console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
-    page_end = page_start + loadTime;
-=======
+    load_start = timingObject.loadEventStart;
+    load_end = timingObject.loadEventEnd;
     loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     console.log('start time' + window.performance.timing.loadEventStart);
     console.log('end time' + window.performance.timing.loadEventEnd);
-    //page_end = page_start + loadTime;
->>>>>>> d87354efdd671d2ed1f48080d9fba2506c2c8978
 }
-*/
+
 // COLLECT ACTIVITY HERE
 
 
