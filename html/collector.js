@@ -27,8 +27,10 @@ var loadTime;
 
 window.onload = function () {
     load_start = timingObject.loadEventStart;
-    load_end = timingObject.loadEventEnd;
-    loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
+    setTimeout(function(){
+        load_end = timingObject.loadEventEnd;
+        loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
+    }, 0);
     console.log('start time' + window.performance.timing.loadEventStart);
     console.log('end time' + window.performance.timing.loadEventEnd);
 }
