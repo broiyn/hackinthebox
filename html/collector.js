@@ -17,20 +17,22 @@ var type = connection.effectiveType;
 timingObject = window.performance.timing;
 
 //time when page start loading
-var page_start = Date.now();
+var load_start = timingObject.loadEventStart;
 
 //time when page done loading
-var page_end;
+var load_end = timingObject.loadEventEnd;
 
 //time when the page completely loaded
-var loadTime;
+var loadTime = timingObject.loadEventEnd-timingObject.navigationStart;
+
+/*
 window.onload = function () {
     loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
-    console.log('start time' + window.performance.timing.domContentLoadedEventStart);
-    console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
-    page_end = page_start + loadTime;
+    console.log('start time' + window.performance.timing.loadEventStart);
+    console.log('end time' + window.performance.timing.loadEventEnd);
+    //page_end = page_start + loadTime;
 }
-
+*/
 // COLLECT ACTIVITY HERE
 
 
@@ -89,6 +91,8 @@ function fetch_activity() {
         'keypress': keypressed,
         'mouse_position': mouse_position,
         'timing_object': timingObject,
+        'load_start': load_start,
+        'load_end': load_end,
         'loading_time': loadTime,
         'user_enter': dateTime,
         'user_leave': dateTime_out
