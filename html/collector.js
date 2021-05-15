@@ -26,13 +26,14 @@ var load_end;
 var loadTime;
 
 window.onload = function () {
-    load_start = timingObject.loadEventStart;
-    setTimeout(function(){
+    setTimeout(function() { 
+        load_start = timingObject.loadEventStart;
         load_end = timingObject.loadEventEnd;
         loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     }, 0);
-    console.log('start time' + window.performance.timing.loadEventStart);
-    console.log('end time' + window.performance.timing.loadEventEnd);
+    
+/*    console.log('start time' + window.performance.timing.loadEventStart);
+    console.log('end time' + window.performance.timing.loadEventEnd);*/
 }
 
 // COLLECT ACTIVITY HERE
