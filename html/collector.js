@@ -17,13 +17,19 @@ var type = connection.effectiveType;
 //object loading time
 
 //time when page start loading
-
+var page_start = Date.now();
 
 //time when page done loading
-
+var page_end;
 
 //time when the page completely loaded
-
+var loadTime;
+window.onload = function () {
+    loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+    console.log('start time' + window.performance.timing.domContentLoadedEventStart);
+    console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
+    page_end = page_start + loadTime;
+}
 
 // COLLECT ACTIVITY HERE
 
@@ -48,12 +54,22 @@ document.addEventListener('keyup', function(e){
 })
 
 //Collect idle time after 2 seconds (when the break ended and how long)
-var inactivityTime = function () {
-    var time
-}
-//When user enter the page
 
-//When user left the page
+//When user enter the page
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+console.log(dateTime);
+// user left the page
+var dateTime_out;
+window.onbeforeunload = function() {
+    var time = new Date();
+    var date_out = time.getFullYear() + '-' + (time.getMonth()+1) + '-' + time.getDate();
+    var time_out = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
+    dateTime_out = date_out + ' ' + time_out;
+    fetch_activity();
+}
 
 //Which page the user was on
 var current_page = window.location.href;
@@ -71,9 +87,12 @@ function fetch_activity() {
         'network_connection': type,
         'current_page': current_page,
         'keypress': keypressed,
-        'mouse_position': mouse_position
+        'mouse_position': mouse_position,
+        'loading_time': loadTime,
+        'user_enter': dateTime,
+        'user_leave': dateTime_out
     };
-    fetch("https://hackinthebox.site/json/user", {
+    fetch("https://hackinthebox.site/json/posts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
