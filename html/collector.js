@@ -13,8 +13,8 @@ var type = connection.effectiveType;
 
 // COLLECT PERFORMANCE HERE
 
-
 //object loading time
+timingObject = window.performance.timing;
 
 //time when page start loading
 var page_start = Date.now();
@@ -25,7 +25,7 @@ var page_end;
 //time when the page completely loaded
 var loadTime;
 window.onload = function () {
-    loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+    loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     console.log('start time' + window.performance.timing.domContentLoadedEventStart);
     console.log('end time' + window.performance.timing.domContentLoadedEventEnd);
     page_end = page_start + loadTime;
@@ -88,6 +88,7 @@ function fetch_activity() {
         'current_page': current_page,
         'keypress': keypressed,
         'mouse_position': mouse_position,
+        'timing_object': timingObject,
         'loading_time': loadTime,
         'user_enter': dateTime,
         'user_leave': dateTime_out
