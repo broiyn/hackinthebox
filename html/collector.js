@@ -138,7 +138,7 @@ window.onbeforeunload = function () {
 var current_page = window.location.href;
 
 function fetch_activity() {
-    postdata = {
+    staticdata = {
         'user_agent_string': user,
         'user_language': lang,
         'cookies_is_allowed': cookie,
@@ -148,35 +148,42 @@ function fetch_activity() {
         'screen_dimension': screen_dimension,
         'window_dimension': window_dimension,
         'network_connection': type,
-        'current_page': current_page,
-        'keypress': keypressed,
-        'mouse_position': mouse_position,
-        'click_button': click_button,
-        'scroll': scrollPos,
+    };
+    activitydata = {
         'timing_object': timingObject,
         'load_start': load_start,
         'load_end': load_end,
         'loading_time': loadTime,
+    };
+    performancedata = {
+        'mouse_position': mouse_position,
+        'click_button': click_button,
+        'scroll': scrollPos,
+        'keypress': keypressed,
         'idle_time': idle_time,
         'user_enter': dateTime,
-        'user_leave': dateTime_out
+        'user_leave': dateTime_out,
+        'current_page': current_page
     };
-    fetch("https://hackinthebox.site/json/posts", {
+    fetch("https://hackinthebox.site/api/static", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(postdata)
+        body: JSON.stringify(staticdata)
+    });
+    fetch("https://hackinthebox.site/api/activity", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(activitydata)
+    });
+    fetch("https://hackinthebox.site/api/performance", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(performancedata)
     });
 }
-function test() {
-    fetch("https://hackinthebox.site/json/posts/")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.length);
-        });
-
-
-}
-
-test();
