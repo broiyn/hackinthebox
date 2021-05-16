@@ -1,4 +1,5 @@
 // COLLECT STATIC HERE
+var timer = new Date();                  //initialize the timer for setting idle time
 
 var user = navigator.userAgent;
 var lang = navigator.language;          //language current used
@@ -56,6 +57,18 @@ document.addEventListener("mousemove", function (event) {
 })
 
 //Click(which buttons)
+var click_button = [];
+window.onmousedown = function(event) {
+    if (event.button === 0){
+        click_button.push(`left_button at (${event.clientX},${event.clientY})`);
+    } else if (event.button === 1){
+        click_button.push(`middle_button at (${event.clientX},${event.clientY})`);
+    } else if (event.button === 2){
+        click_button.push('right_button');
+    }
+    
+}
+
 
 //Scrolling(coordinates of the scroll)
 var scrollPos = []
@@ -113,6 +126,7 @@ function fetch_activity() {
         'current_page': current_page,
         'keypress': keypressed,
         'mouse_position': mouse_position,
+        'click_button': click_button,
         'scroll': scrollPos,
         'timing_object': timingObject,
         'load_start': load_start,
