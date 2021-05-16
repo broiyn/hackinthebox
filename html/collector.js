@@ -4,7 +4,13 @@ var user = navigator.userAgent;
 var lang = navigator.language;          //language current used
 var cookie = navigator.cookieEnabled;   //True if cookie is Enabled, False otherwise
 var JS_allowed = true;                  //need to find out how to implement this
-var images_allowed = true;              //need to find out how to implement this
+
+var images_allowed;
+window.addEventListener("imgLoad", event => {
+    var image = document.querySelector('hackintheboxImg');
+    images_allowed = image.complete && image.naturalHeight !== 0;
+});
+
 var CSS_allowed = true;
 var screen_dimension = `(hxw) = (${screen.height}x${screen.width})`;
 var window_dimension = `(hxw) = (${window.innerHeight}x${window.innerWidth})`;
@@ -26,13 +32,15 @@ var load_end;
 var loadTime;
 
 window.onload = function () {
-    load_start = timingObject.loadEventStart;
-    setTimeout(function () {
-        load_end = timingObject.loadEventEnd;
-        loadTime = timingObject.loadEventEnd - timingObject.navigationStart;
+    setTimeout(function() { 
+        loadStartDate = new Date(timingObject.navigationStart);
+        load_start = loadStartDate.toUTCString();
+
+        loadEndDate = new Date(timingObject.loadEventEnd);
+        load_end = loadEndDate.toUTCString();
+
+        loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
     }, 0);
-    console.log('start time' + window.performance.timing.loadEventStart);
-    console.log('end time' + window.performance.timing.loadEventEnd);
 }
 
 // COLLECT ACTIVITY HERE
@@ -50,6 +58,13 @@ document.addEventListener("mousemove", function (event) {
 //Click(which buttons)
 
 //Scrolling(coordinates of the scroll)
+var scrollPos = []
+window.addEventListener("scroll", (event) => {
+    var scrollX = this.scrollX;
+    var scrollY = this.scrollY;
+    var pos = `(${scrollX},${scrollY})`;
+    scrollPos.push(pos);
+});
 
 window.onscroll = function() {
     console.log(document.body.scrollTop);
@@ -98,6 +113,7 @@ function fetch_activity() {
         'current_page': current_page,
         'keypress': keypressed,
         'mouse_position': mouse_position,
+        'scroll': scrollPos,
         'timing_object': timingObject,
         'load_start': load_start,
         'load_end': load_end,
