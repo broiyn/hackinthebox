@@ -1,5 +1,6 @@
 // COLLECT STATIC HERE
 var timer = new Date();                  //initialize the timer for setting idle time
+var time_reset = timer.getTime();
 
 var user = navigator.userAgent;
 var lang = navigator.language;          //language current used
@@ -54,6 +55,14 @@ document.addEventListener("mousemove", function (event) {
     var y = event.clientY;
     var position = `(${x},${y})`;
     mouse_position.push(position);
+    var current_time = new Date();
+    var current = current_time.getTime();
+    if ((current - time_reset) > 2000){
+        idle_time.push(`${current_time}for ${current - time_reset} miliseconds by moving`);
+    }
+    timer = new Date();
+    time_reset = timer.getTime();
+    console.log(idle_time);
 })
 
 //Click(which buttons)
@@ -66,7 +75,14 @@ window.onmousedown = function(event) {
     } else if (event.button === 2){
         click_button.push('right_button');
     }
-    
+    var current_time = new Date();
+    var current = current_time.getTime();
+    if ((current - time_reset) > 2000){
+        idle_time.push(`${current_time}for ${current - time_reset} miliseconds by clicking`);
+    }
+    timer = new Date();
+    time_reset = timer.getTime();
+    console.log(idle_time);
 }
 
 
@@ -77,21 +93,30 @@ window.addEventListener("scroll", (event) => {
     var scrollY = this.scrollY;
     var pos = `(${scrollX},${scrollY})`;
     scrollPos.push(pos);
+    var current_time = new Date();
+    var current = current_time.getTime();
+    if ((current - time_reset) > 2000){
+        idle_time.push(`${current_time}for ${current - time_reset} miliseconds by scrolling`);
+    }
+    timer = new Date();
+    time_reset = timer.getTime();
 });
 
-window.onscroll = function() {
-    console.log(document.body.scrollTop);
-    console.log(document.documentElement.scrollTop);
-    console.log(document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    MouseEvent.clientX
-}
 // Collect Key up event
 var keypressed = [];
 document.addEventListener('keyup', function (e) {
     keypressed.push(e.code);
-})
+    var current_time = new Date();
+    var current = current_time.getTime();
+    if ((current - time_reset) > 2000){
+        idle_time.push(`${current_time}for ${current - time_reset} miliseconds by typing`);
+    }
+    timer = new Date();
+    time_reset = timer.getTime();
+});
 
 //Collect idle time after 2 seconds (when the break ended and how long)
+var idle_time = [];
 
 //When user enter the page
 var today = new Date();
