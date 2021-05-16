@@ -8,7 +8,7 @@
   // Send the request, and print out the returned bytes.
   $context = stream_context_create(
     array('http' => array(
-      'header'  => "Content-type: application/json\r\n",
+      'header'  => "Content-type: application/json",
       'method' => 'POST',
       'content' => http_build_query($data)
     ))
