@@ -27,9 +27,9 @@ var loadTime;
 
 window.onload = function () {
     load_start = timingObject.loadEventStart;
-    setTimeout(function(){
+    setTimeout(function () {
         load_end = timingObject.loadEventEnd;
-        loadTime = timingObject.loadEventEnd-timingObject.navigationStart; 
+        loadTime = timingObject.loadEventEnd - timingObject.navigationStart;
     }, 0);
     console.log('start time' + window.performance.timing.loadEventStart);
     console.log('end time' + window.performance.timing.loadEventEnd);
@@ -51,6 +51,12 @@ document.addEventListener("mousemove", function (event) {
 
 //Scrolling(coordinates of the scroll)
 
+window.onscroll = function() {
+    console.log(document.body.scrollTop);
+    console.log(document.documentElement.scrollTop);
+    console.log(document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    MouseEvent.clientX
+}
 // Collect Key up event
 var keypressed = [];
 document.addEventListener('keyup', function (e) {
@@ -107,14 +113,14 @@ function fetch_activity() {
         body: JSON.stringify(postdata)
     });
 }
-function test(){
+function test() {
     fetch("https://hackinthebox.site/json/posts/")
         .then(response => response.json())
         .then(data => {
             console.log(data.length);
         });
-        
-        
+
+
 }
 
 test();
