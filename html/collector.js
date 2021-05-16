@@ -187,14 +187,3 @@ function fetch_activity() {
         body: JSON.stringify(performancedata)
     });
 }
-function test() {
-    fetch("https://hackinthebox.site/json/posts/")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.length);
-        });
-
-
-}
-
-test();
