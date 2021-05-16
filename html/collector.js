@@ -4,7 +4,13 @@ var user = navigator.userAgent;
 var lang = navigator.language;          //language current used
 var cookie = navigator.cookieEnabled;   //True if cookie is Enabled, False otherwise
 var JS_allowed = true;                  //need to find out how to implement this
-var images_allowed = true;              //need to find out how to implement this
+
+var images_allowed;
+window.addEventListener("imgLoad", event => {
+    var image = document.querySelector('hackintheboxImg');
+    images_allowed = image.complete && image.naturalHeight !== 0;
+});
+
 var CSS_allowed = true;
 var screen_dimension = `(hxw) = (${screen.height}x${screen.width})`;
 var window_dimension = `(hxw) = (${window.innerHeight}x${window.innerWidth})`;
