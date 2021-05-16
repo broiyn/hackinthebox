@@ -14,7 +14,7 @@
     ))
   );
 
-  $fp = file_get_contents('https://hackinthebox.site/json/posts', false, $context);
+  $fp = file_get_contents('https://hackinthebox.site/api/static', false, $context);
   
 
 ?>
