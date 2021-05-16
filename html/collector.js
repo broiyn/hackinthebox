@@ -157,6 +157,7 @@ function fetch_activity() {
         'load_start': load_start,
         'load_end': load_end,
         'loading_time': loadTime,
+        'idle_time': idle_time,
         'user_enter': dateTime,
         'user_leave': dateTime_out
     };
