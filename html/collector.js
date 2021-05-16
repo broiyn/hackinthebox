@@ -6,8 +6,8 @@ var cookie = navigator.cookieEnabled;   //True if cookie is Enabled, False other
 var JS_allowed = true;                  //need to find out how to implement this
 
 var images_allowed;
-window.addEventListener("imgLoad", event => {
-    var image = document.querySelector('hackintheboxImg');
+window.addEventListener("load", event => {
+    var image = document.querySelector('img');
     images_allowed = image.complete && image.naturalHeight !== 0;
 });
 
