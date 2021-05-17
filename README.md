@@ -1,9 +1,15 @@
-# HW2 for CSE135
+# HW3 for CSE135
 ## [link to hackinthebox](https://hackinthebox.site)
 ## GitHub repo: [https://github.com/upchang/hackinthebox](https://github.com/upchang/hackinthebox)
 
-# username : grader@143.198.224.52
-# passwrd : Ucsd_2020
+# note: We did set up our database with MySQL for Part 2, but we were unable to connect it with the endpoint
+
+# Website Login
+## username : grader
+## password : Ucsd_2020
+
+# Server Login
+## username : grader@143.198.224.52
+## password : Ucsd_2020
 
 # screenshots and code are also in our github repo 
-# note: we weren't able to get cookies working for python and ruby before the deadline 
