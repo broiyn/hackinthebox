@@ -62,7 +62,6 @@ document.addEventListener("mousemove", function (event) {
     }
     timer = new Date();
     time_reset = timer.getTime();
-    console.log(idle_time);
 })
 
 //Click(which buttons)
@@ -82,7 +81,6 @@ window.onmousedown = function(event) {
     }
     timer = new Date();
     time_reset = timer.getTime();
-    console.log(idle_time);
 }
 
 
@@ -187,3 +185,18 @@ function fetch_activity() {
         body: JSON.stringify(performancedata)
     });
 }
+
+var obj;
+async function request_resource(){
+    fetch('https://hackinthebox.site/api/static')
+    .then(res => res.json())
+    .then(data => obj =data)
+    .then(() => console.log('error'));
+}
+
+async function display(){
+    console.log(`obj here ${obj}`);
+}
+
+request_resource();
+
