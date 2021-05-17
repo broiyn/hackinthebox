@@ -46,7 +46,6 @@
     // processing the static data
     if (request.status === 200) {
       staticdata = JSON.parse(request.responseText);
-      console.log(staticdata);
       var i;
       totalcount = staticdata.length;
       for (i = 0; i < totalcount; i++){
@@ -105,12 +104,6 @@
       plotarea: {
         margin: '20 0 0 0'
       },
-      source: {
-        text: 'Source: gs.statcounter.com',
-        fontColor: '#8e99a9',
-        fontFamily: 'Open Sans',
-        textAlign: 'left'
-      },
       series: [{
           text: 'JavaScript Enabled',
           values: [JSEnabledPercent],
@@ -147,6 +140,44 @@
       width: '100%',
     });
   </script>
+  </script>
+  <div id="chart-div"></div>
+    <script>
+      var activitydata;    
+      var request2 = new XMLHttpRequest();
+      request2.open('GET', 'https://hackinthebox.site/api/activity', false);  // `false` makes the request synchronous
+      request2.send(null);
+      var totalcount = 0;
+      enterHours = new Array(24);
+      leaveHours = new Array(24)
+      // processing the static data
+      if (request2.status === 200) {
+        activitydata = JSON.parse(request2.responseText);
+        console.log(activitydata);
+        var i;
+        totalcount = activitydata.length;
+        for (i = 0; i < totalcount; i++){
+          console.log(activitydata[i].user_enter);
+          console.log(activitydata[i].user_leave);
+        }
+        JSEnabledPercent = JStruecount / totalcount;
+        JSDisabledPercent = JSfalsecount / totalcount;
+      }
+
+      var chartData = {
+        type: 'bar',
+        series: [
+        {
+          values: [35, 42, 67, 89]
+        }
+        ]
+        };
+      zingchart.render({
+        id: 'chart-div',
+        data: chartData
+      });
+    </script>
+
 </body>
 
 </html>
