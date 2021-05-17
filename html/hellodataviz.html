@@ -148,8 +148,8 @@
       request2.open('GET', 'https://hackinthebox.site/api/activity', false);  // `false` makes the request synchronous
       request2.send(null);
       var totalcount = 0;
-      enterHours = new Array(24);
-      leaveHours = new Array(24)
+      enterHours = new Array(24).fill(0);
+      leaveHours = new Array(24).fill(0);
       // processing the static data
       if (request2.status === 200) {
         activitydata = JSON.parse(request2.responseText);
@@ -157,18 +157,23 @@
         var i;
         totalcount = activitydata.length;
         for (i = 0; i < totalcount; i++){
-          console.log(activitydata[i].user_enter);
-          console.log(activitydata[i].user_leave);
+          userenter = activitydata[i].user_enter;
+          enterhour = parseInt(userenter.substring(userenter.length-7, userenter.length-5));
+          enterHours[enterhour]++;
+          userleave = activitydata[i].user_enter;
+          leavehour = parseInt(userleave.substring(userleave.length-7, userleave.length-5));
+          leaveHours[leavehour]++;
         }
-        JSEnabledPercent = JStruecount / totalcount;
-        JSDisabledPercent = JSfalsecount / totalcount;
       }
 
       var chartData = {
         type: 'bar',
         series: [
         {
-          values: [35, 42, 67, 89]
+          values: enterHours
+        },
+        {
+          values: leaveHours
         }
         ]
         };
