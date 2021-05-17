@@ -147,13 +147,13 @@ function fetch_activity() {
         'window_dimension': window_dimension,
         'network_connection': type,
     };
-    activitydata = {
+    performancedata = {
         'timing_object': timingObject,
         'load_start': load_start,
         'load_end': load_end,
         'loading_time': loadTime,
     };
-    performancedata = {
+    activitydata = {
         'mouse_position': mouse_position,
         'click_button': click_button,
         'scroll': scrollPos,
