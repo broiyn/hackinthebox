@@ -129,20 +129,23 @@ var staticdata;
 var request = new XMLHttpRequest();
 request.open('GET', 'https://hackinthebox.site/api/static', false);  // `false` makes the request synchronous
 request.send(null);
-var truecount = 0;
-var falsecount = 0;
+var JStruecount = 0;
+var JSfalsecount = 0;
 if (request.status === 200) {
   staticdata = JSON.parse(request.responseText);
   console.log(staticdata);
   var i;
   for (i = 0; i < staticdata.length; i++){
-        console.log(staticdata[i].JS_allowed);
         if (staticdata[i].JS_allowed == true) {
-          truecount++;
+          JStruecount++;
+        }
+        else {
+          JSfalsecount++;
         }
     }
-    console.log(truecount);
 }
+console.log(JStruecount);
+console.log(JSfalsecount);
 
    
 
