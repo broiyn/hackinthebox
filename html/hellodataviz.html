@@ -64,21 +64,12 @@
       type: 'pie',
       backgroundColor: '#2B313B',
       title: {
-        text: 'Global Browser Usage',
+        text: 'JavaScript Enabled Users',
         align: 'left',
         fontColor: '#fff',
         fontFamily: 'Open Sans',
         fontSize: '25px',
         offsetX: '10px',
-      },
-      subtitle: {
-        text: 'June 2020',
-        align: 'left',
-        fontColor: '#8e99a9',
-        fontFamily: 'Open Sans',
-        fontSize: '16px',
-        offsetX: '10px',
-        offsetY: '10px'
       },
       plot: {
         tooltip: {
@@ -168,11 +159,21 @@
 
       var chartData = {
         type: 'bar',
+        title: {
+        text: 'User Enter and Exit Times',
+        align: 'left',
+        fontColor: '#fff',
+        fontFamily: 'Open Sans',
+        fontSize: '25px',
+        offsetX: '10px',
+        },
         series: [
         {
+          ext: 'User Enter Time',
           values: enterHours
         },
         {
+          ext: 'User Exit Time',
           values: leaveHours
         }
         ]
