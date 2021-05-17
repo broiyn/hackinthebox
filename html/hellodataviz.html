@@ -85,29 +85,14 @@
         textAlign: 'left'
       },
       series: [{
-          text: 'IE and Edge',
+          text: 'JavaScript Enabled',
           values: [4.8],
           backgroundColor: '#50ADF5'
         },
         {
-          text: 'Chrome',
+          text: 'JavaScript Disabled',
           values: [63.69],
           backgroundColor: '#FF7965'
-        },
-        {
-          text: 'Firefox',
-          values: [4.64],
-          backgroundColor: '#FFCB45'
-        },
-        {
-          text: 'Safari',
-          values: [15.15],
-          backgroundColor: '#6877e5'
-        },
-        {
-          text: 'Other',
-          values: [11.72],
-          backgroundColor: '#6FB07F'
         }
       ]
     };
@@ -129,25 +114,33 @@ var staticdata;
 var request = new XMLHttpRequest();
 request.open('GET', 'https://hackinthebox.site/api/static', false);  // `false` makes the request synchronous
 request.send(null);
+var totalcount = 0;
 var JStruecount = 0;
 var JSfalsecount = 0;
+var JSEnabledPercent = 0;
+var JSDisabledPercent = 0;
+// processing the static data
 if (request.status === 200) {
   staticdata = JSON.parse(request.responseText);
   console.log(staticdata);
   var i;
-  for (i = 0; i < staticdata.length; i++){
-        if (staticdata[i].JS_allowed == true) {
-          JStruecount++;
-        }
-        else {
-          JSfalsecount++;
-        }
+  totalcount = staticdata.length;
+  for (i = 0; i < totalcount; i++){
+    if (staticdata[i].JS_allowed == true) {
+      JStruecount++;
     }
+    else {
+      JSfalsecount++;
+    }
+  }
+  JSEnabledPercent = JStruecount / totalcount;
+  JSDisabledPercent = JSDisabledPercent / totalcount;
 }
+
 console.log(JStruecount);
 console.log(JSfalsecount);
-
-   
+console.log(JSEnabledPercent);   
+console.log(JSDisabledPercent);
 
 
     // RENDER CHARTS
