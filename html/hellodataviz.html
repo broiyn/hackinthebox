@@ -131,7 +131,7 @@ request.open('GET', 'https://hackinthebox.site/api/static', false);  // `false` 
 request.send(null);
 var truecount = 0;
 var falsecount = 0;
-if (request2.status === 200) {
+if (request.status === 200) {
   staticdata = JSON.parse(request.responseText);
   console.log(staticdata);
   var i;
